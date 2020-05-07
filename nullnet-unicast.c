@@ -38,7 +38,7 @@ void input_callback(const void *data, uint16_t len,
   const linkaddr_t *src, const linkaddr_t *dest)
 {	
 	if(tracker < numOfMotes){
-    unsigned temp_val; // temperature coming from nodes 
+    unsigned temp_val; // temperature coming from slaves nodes 
     memcpy(&temp_val, data, sizeof(temp_val)); 
 	sum += temp_val; 
     LOG_INFO("Received %u from ", temp_val);
